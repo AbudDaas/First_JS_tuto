@@ -1,3 +1,3 @@
-import generateJoke from './generateJoke'
+import generateJoke from './js/generateJoke'
 
 console.log(generateJoke())
