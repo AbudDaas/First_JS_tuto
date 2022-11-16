@@ -1,7 +1,11 @@
 /* Current Path */
 const path = require('path')
+const { VueLoaderPlugin } = require('vue-loader')
+
 /* HTML Template */
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+const webpack = require('webpack')
 
 module.exports = {
     /* Build Type */
@@ -32,11 +36,17 @@ module.exports = {
     },
     module: {
         rules: [
+         /* Images Loader */
+         {
+            test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+            type: 'asset/resource',
+        },
          /* Style Sheet Loader*/
          {
             test: /\.css$/,
             use: ['style-loader', 'css-loader'],
-        },
+            },
+        /* GLTF Loader */
         {
             test: /\.glb$/,
             use:
@@ -49,6 +59,12 @@ module.exports = {
                     }
                 }
             ]
+            },
+        // Vue loader
+        {
+            test: /\.vue$/,
+            exclude: /node_modules/,
+            loader: 'vue-loader'
         },
         ]
     },
@@ -60,5 +76,12 @@ module.exports = {
             filename: 'index.html',
             template: "./src/template.html",
         }),
+        // add vue-loader plugin
+        new VueLoaderPlugin(),
+        /**
+         * to remove warn in browser console: runtime-core.esm-bundler.js:3607 
+         * Feature flags __VUE_OPTIONS_API__, __VUE_PROD_DEVTOOLS__ are not explicitly defined..
+         */
+        new webpack.DefinePlugin({ __VUE_OPTIONS_API__: true, __VUE_PROD_DEVTOOLS__: true }),
     ],
 }

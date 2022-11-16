@@ -1,3 +1,6 @@
-import generateJoke from './js/generateJoke'
+import { createApp } from "vue";
+import App from './App.vue'
 
-console.log(generateJoke())
+const app = createApp(App);
+
+app.mount("#app");
