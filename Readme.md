@@ -2,6 +2,14 @@
 
 ---
 
+```
+npm i
+npm run build
+npm run serve
+```
+
+---
+
 ## First Lesson
 
 - item1
