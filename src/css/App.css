@@ -2,18 +2,29 @@
     width: max-content;
 }
 
-.menu {
-  float: "left";
+#menu {
+  float: left;
   width: 30%;
-  height: 70%;
+  height: 500px;
+  border:thin solid black;
+  border-radius: 10px;
 }
 
-.scene {
-  float: "right";
-  width: 70%;
-  height: 70%;
+#scene {
+  float: right;
+  width: 69.5%;
+  height: 500px;
+  border: thin solid black;
+  border-radius: 10px;
 }
 
-.log {
-    height: 30%;
+
+
+#log {
+  clear: both;
+  float: end;
+  height: 100px;
+  width: 100%; 
+  border:thin solid black;
+  border-radius: 10px;
 }
