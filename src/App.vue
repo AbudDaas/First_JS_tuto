@@ -15,10 +15,12 @@
     </div>
 
   </div>
+  
+
 </template>
 
 <script>
-import MyScene from "./components/myScene.vue";
+import MyScene from "./components/MyScene.vue";
 
 export default {
   methods: {},

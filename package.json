@@ -14,6 +14,7 @@
   "author": "Abud",
   "license": "MIT",
   "dependencies": {
+    "mitt": "^3.0.0",
     "three": "^0.146.0",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6"
