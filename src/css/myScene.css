@@ -1,5 +1,6 @@
 #container{
+    float: right;
     position: absolute;
-    width: 100%;
+    width: 68%;
     height:70%
 }

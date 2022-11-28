@@ -28,12 +28,20 @@ export default {
             this.camera = sceneCreator_.getCamera();
             this.renderer = sceneCreator_.getRenderer();
             createBase(this.scene);
-            // loadYumi(this.scene);
+            //loadYumi(this.scene);
 
-            const lego_1_pos = new Vector3(0, 0, 0);
-            new CreateLego(this.scene, 4, "y", "lego_1", lego_1_pos, false);
 
-            
+            const lego_1_pos = new Vector3(9, 1, 0);
+            new CreateLego(this.scene, 6, "l", "lego_1", lego_1_pos, false);
+
+
+            const lego_2_pos = new Vector3(0, 0, 0);
+            new CreateLego(this.scene, 6, "o", "lego_2", lego_2_pos, false);
+
+
+            const lego_13_pos = new Vector3(1, 0, 0);
+            new CreateLego(this.scene, 6, "y", "lego_13", lego_13_pos, true);
+
         },
         resetCamera(){
             this.scene.rotation.set(0, 0, 0);
